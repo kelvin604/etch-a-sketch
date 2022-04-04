@@ -4,9 +4,8 @@ const restart = document.querySelector('#restart');
 
 for(let i = 0; i < 512; i++){
     let div = document.createElement('div');
-    div.textContent = 'o';
     div.addEventListener("mouseover", function(e){
-        e.target.style.color = 'red';
+        e.target.style.backgroundColor = 'black';
         
         setTimeout(function(){
             e.target.style.color = '';
@@ -18,14 +17,17 @@ for(let i = 0; i < 512; i++){
 }
 
 restart.addEventListener('click', ()=>{
-    container.textContent= ''
+    
     let num = prompt('How many square per row?');
+    if(num > 100){
+        return;
+    }
+    container.textContent= ''
     container.style.setProperty('grid-template-columns', `repeat(${num}, 1fr)`)
     for(let i = 0; i < num * num; i++){
         let div = document.createElement('div');
-        div.textContent = 'o';
         div.addEventListener("mouseover", function(e){
-            e.target.style.color = 'red';
+            e.target.style.backgroundColor = 'black';
             setTimeout(function(){
                 e.target.style.color = '';
             }, 5000);
