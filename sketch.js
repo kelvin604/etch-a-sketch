@@ -18,7 +18,7 @@ for(let i = 0; i < 512; i++){
 
 restart.addEventListener('click', ()=>{
     
-    let num = prompt('How many square per row?');
+    let num = prompt('How many square per row? max(100)');
     if(num > 100){
         return;
     }
