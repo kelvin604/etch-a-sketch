@@ -2,11 +2,10 @@ const container = document.querySelector('.container');
 const restart = document.querySelector('#restart');
 
 
-for(let i = 0; i < 512; i++){
+for(let i = 0; i < 256; i++){
     let div = document.createElement('div');
     div.addEventListener("mouseover", function(e){
         e.target.style.backgroundColor = 'black';
-        
         setTimeout(function(){
             e.target.style.color = '';
         }, 5000);
